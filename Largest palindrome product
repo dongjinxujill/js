@@ -1,0 +1,39 @@
+function isPalin(num) {
+  var str = num.toString();
+
+  var backStr = '';
+
+  for (var i = str.length - 1; i >= 0; i -= 1) {
+
+    backStr += str[i];
+  }
+
+  if (str === backStr) {
+
+    return true;
+  } else {
+
+    return false;
+  }
+}
+
+
+function largestPalin3(num) {
+  var num1 = Math.sqrt(num);
+  var num2 = Math.sqrt(num);
+  var arr = [];
+
+  for (var i = num1; i >= 0; i -= 1) {
+    for (var j = num2; j >=0; j -= 1) {
+
+      var product = j * i;
+
+      if (isPalin(product)) {
+        arr.push(product);
+      }
+    }
+
+  }
+  return Math.max(...arr);
+}
+
