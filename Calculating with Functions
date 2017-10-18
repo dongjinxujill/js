@@ -1,0 +1,23 @@
+function makeF(n, f) {
+  if (f === undefined) {
+    return n;
+  } else {
+    return f(n);
+  }
+}
+
+function zero(f) {return makeF(0,f);}
+function one(f) {return makeF(1,f);}
+function two(f) {return makeF(2,f);}
+function three(f) {return makeF(3,f);}
+function four(f) {return makeF(4,f);}
+function five(f) {return makeF(5,f);}
+function six(f) {return makeF(6,f);}
+function seven(f) {return makeF(7,f);}
+function eight(f) {return makeF(8,f);}
+function nine(f) {return makeF(9,f);}
+
+function plus(x) { return function(y) {return x+y;}}
+function minus(x) {return function(y) {return y-x;}}
+function times(x) {return function(y) {return x*y;}}
+function dividedBy(x) {return function(y) {return y/x;}}
