@@ -1,0 +1,23 @@
+function narcissistic( value ) {
+  // Code me
+  var strValue = value.toString();
+  var strLength = strValue.length;
+  
+  var sum = 0;
+  
+  for (var i = 0; i < strLength; i += 1) {
+  
+    var char = parseInt(strValue[i]);
+    
+    sum += Math.pow(char, strLength);
+  }
+  
+  if (sum === value) {
+  
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
