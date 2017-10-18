@@ -1,0 +1,56 @@
+function isPrime(num) {
+
+	if (num < 2) {
+		return false;
+	} else {
+
+		for (var i = 2; i < num; i += 1) {
+			if (num % i === 0) {
+				return false;
+			}
+		}
+	}
+
+	return true;
+}
+
+function prime(num) {
+	var arrPrime = [];
+	for (var i = 0; i < num; i += 1) {
+
+		if (isPrime(i)) {
+
+			arrPrime.push(i);
+		}
+	}
+	return arrPrime;
+
+}
+
+
+function primeFactor(num) {
+	var arrPrime = prime(num);
+	var arr = [];
+
+
+	while (num > 1) {
+	var randomPrime = arrPrime[Math.floor(Math.random() * arrPrime.length)];
+
+		if (num % randomPrime === 0) {
+			num = num/randomPrime;
+			arr.push(randomPrime);
+		}
+	}
+
+	arr.sort( function (a,b) {return a - b});
+	return arr;	
+}
+
+
+
+function largestPrimeFactor(num) {
+	var arr = primeFactor(num);
+	return arr[arr.length-1];
+}
+
+
