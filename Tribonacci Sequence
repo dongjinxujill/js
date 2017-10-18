@@ -1,0 +1,24 @@
+function tribonacci(signature,n){
+  //your code here
+  var fib1 = signature[0];
+  var fib2 = signature[1];
+  var fib3 = signature[2];
+  var fib4 = fib1 + fib2 + fib3;
+  var arr = [fib1];
+  
+  if (n === 0) {
+    return [];
+  }
+  
+  while (n > arr.length) {
+    
+    fib1 = fib2;
+    fib2 = fib3;
+    fib3 = fib4;
+    fib4 = fib1 + fib2+ fib3;
+    arr.push(fib1);
+    
+  }
+  
+  return arr;
+}
