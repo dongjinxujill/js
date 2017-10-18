@@ -1,0 +1,30 @@
+function fibonacci(fib1,fib2) {
+
+
+	//var fib1 = 1;
+	//var fib2 = 2;
+	var arr = [];
+	var fib3 = fib1 + fib2;
+
+	while (fib1 <= 4000000) {
+		arr.push(fib1);
+
+		fib3 = fib1 + fib2;
+		fib1 = fib2;
+		fib2 = fib3;
+
+
+	}
+	var sum = 0;
+	for (var i = 0; i < arr.length; i += 1) {
+
+		if (arr[i] % 2 === 0) {
+			sum += arr[i];
+
+		}
+	}
+
+	return sum;
+}
+
+console.log(fibonacci(1,2))
