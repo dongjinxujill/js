@@ -1,0 +1,37 @@
+function smallestPositiveNumber(num) {
+  var listOfNum = [11,12,13,14,15,16,17,18,19,20];
+
+
+  while (true) {
+    var count = 0;
+    for (var i = 0; i < listOfNum.length; i += 1) {
+      var char = listOfNum[i];
+
+      if (num % char === 0) {
+        count += 1;
+        continue;
+      } else {
+
+        num += 1;
+        count = 0;
+        i = 0;
+      }
+    }
+    if (count === listOfNum.length) {
+
+      break;
+    }
+
+
+
+  }
+
+  return num;
+}
+
+var product = 1;
+
+for (var i = 1; i <= 10; i += 1) {
+  product *= i;
+}
+
