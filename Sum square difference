@@ -1,0 +1,21 @@
+function sumOfSquare(num) {
+
+  return (num * (num+  1) * (2 * num + 1)) / 6;
+}
+
+function squareOfSum(num) {
+
+  return Math.pow((num * (num + 1))/2, 2);
+
+}
+
+
+function difference(num) {
+
+  var num1 = sumOfSquare(num);
+  var num2 = squareOfSum(num);
+
+  return Math.abs(num1 - num2);
+}
+
+console.log(difference(100));
